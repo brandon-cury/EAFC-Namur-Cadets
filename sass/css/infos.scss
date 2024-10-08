@@ -1,0 +1,8 @@
+#infos {
+  @extend #actualites;
+  header {
+    .title {
+      background-image: url("img/infoBg.jpg");
+    }
+  }
+}

@@ -1,0 +1,521 @@
+.colorPoint {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+
+  height: 40px;
+
+  .block {
+    width: 40px;
+    height: 100%;
+  }
+}
+.colorPoint.firstColorPoint {
+  @include setColorPoint();
+}
+.colorPoint.lastColorPoint {
+  @include setColorPoint(
+    $left: $color-bleu,
+    $right: $color-vert,
+    $leftRadius: top-right,
+    $rightRaduis: top-left
+  );
+}
+#accueil {
+  /* header */
+  header {
+    .imgPr {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      background-attachment: fixed;
+      background-image: url("img/school.png");
+      background-size: cover;
+      background-position: center;
+      .degrad {
+        @include degrad($position: absolute);
+      }
+    }
+    h1 {
+      text-align: center;
+      padding: 10px 0;
+      .titlePr {
+        display: block;
+        text-transform: uppercase;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 700;
+      }
+    }
+    .cardHeader {
+      top: 30px;
+      padding: 10px 0 20px 0;
+      white-space: nowrap; /* Empêche les éléments de revenir à la ligne */
+      z-index: 1;
+      width: 100%;
+      overflow: hidden;
+      background-color: $color-vert;
+      @keyframes slide {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-100%);
+        }
+      }
+      &:hover .cardContains {
+        animation-play-state: running;
+      }
+
+      .cardContains {
+        width: auto;
+        animation: 20s slide infinite linear;
+        display: inline-block;
+        &.running {
+          animation-play-state: running;
+        }
+        &.paused {
+          animation-play-state: paused;
+        }
+        .card {
+          transition: 1s;
+          display: inline-block;
+          position: relative;
+          white-space: wrap;
+          vertical-align: top;
+          width: 550px;
+          max-width: 550px;
+          top: 0;
+          margin-left: 20px;
+          text-transform: capitalize;
+          color: $color-clair;
+          border-radius: 0;
+          border: 4px solid $color-clair;
+
+          .card-img {
+            position: relative;
+            max-height: 300px;
+            object-fit: cover;
+          }
+          .card-img-overlay {
+            padding: 0;
+          }
+          svg {
+            cursor: pointer;
+          }
+        }
+        .card.firstTime {
+          .card-img-overlay {
+            h4 {
+              position: absolute;
+              margin: 0;
+              width: 100%;
+              bottom: 0;
+              color: $color-jaune;
+              font-weight: bolder;
+              background-image: linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.7),
+                transparent
+              );
+            }
+            p {
+              display: none;
+            }
+            .remove {
+              display: none;
+            }
+          }
+        }
+        .card.secondTime {
+          .card-img {
+            display: none;
+          }
+          .card-img-overlay {
+            position: relative;
+            background-color: rgba(0, 0, 0, 0.7);
+            height: max-content;
+            padding: 5px;
+            min-height: 300px;
+          }
+          h4 {
+            color: $color-jaune;
+            font-weight: bolder;
+          }
+          .add {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  /* Popub */
+  .modal {
+    color: $color-clair;
+    a,
+    h4 {
+      @extend .linkStyle1;
+      letter-spacing: 0.8px;
+      color: $color-clair;
+      display: block;
+      line-height: 30px;
+      font-weight: 400;
+    }
+    .modal-content {
+      background-color: $color-vert-clair;
+      position: relative;
+      width: 100%;
+      .logoModalHearder {
+        max-width: 50px;
+      }
+    }
+    .modal-body {
+      .logoModalBody {
+        max-width: 150px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+      h4 {
+        font-size: 1.424rem;
+        letter-spacing: 0.1px;
+        text-align: center;
+        &:hover {
+          color: $color-clair;
+        }
+      }
+      ul {
+        li {
+          text-transform: uppercase;
+          list-style-image: url("img/arrow.png");
+          margin-bottom: 10px;
+        }
+      }
+    }
+    .closeButton,
+    .btn-close {
+      background-color: $color-red;
+      color: $color-clair;
+    }
+  }
+
+  /* endPopub */
+  #informations {
+    .num {
+      color: $color-red;
+      font-weight: 600;
+    }
+    a {
+      @extend .linkStyle1;
+    }
+  }
+
+  #actualites {
+    width: 100%;
+    overflow: hidden;
+    h2 {
+      color: $color-black;
+      margin: 20px 0;
+    }
+    .slideActualites {
+      .card {
+        border: none;
+        text-decoration: none;
+        overflow: hidden;
+        .card-img-top {
+          height: 10rem;
+          border-radius: 0;
+          min-height: 150px;
+          max-height: 400px;
+          object-fit: cover;
+          transition: transform 0.3s;
+        }
+        .card-body {
+          background-color: $color-vert-clair-clair;
+          color: $color-black;
+          h4 {
+            font-size: 1.266rem;
+          }
+          p {
+            color: $color-vert;
+            font-weight: 500;
+          }
+        }
+      }
+      .card:hover .card-img-top {
+        transform: scale(1.1);
+      }
+    }
+    a {
+      @extend .linkStyle1;
+      color: $color-vert;
+      margin-left: 12px;
+    }
+  }
+
+  #newFormation {
+    position: relative;
+    height: auto;
+
+    background-color: $color-vert-clair;
+
+    padding: 50px 0;
+
+    .formations {
+      a {
+        text-decoration: none;
+      }
+      .card {
+        overflow: hidden;
+
+        margin-bottom: 20px;
+        box-shadow: 0px 0px 14px -1px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 0px 0px 14px -1px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 14px -1px rgba(0, 0, 0, 0.75);
+
+        .card-img-top {
+          transition: transform 0.3s ease;
+          max-height: 200px;
+          object-fit: cover;
+        }
+
+        .card-body {
+          h3 {
+            font-size: 1.424rem;
+            font-weight: bolder;
+
+            color: $color-clair;
+          }
+        }
+      }
+      .card:hover .card-img-top {
+        transform: scale(1.1);
+      }
+    }
+    .linkStyle {
+      display: block;
+      width: fit-content;
+      @extend .linkStyle1;
+      color: $color-clair;
+      margin-top: 20px;
+    }
+  }
+  /*categories*/
+  #categories {
+    width: 100%;
+    font-family: "Roboto Condensed", sans-serif;
+
+    color: $color-black;
+    h2 {
+      color: $color-black;
+      padding: 0;
+    }
+
+    .listCategories {
+      margin: 20px 0 100px 0;
+      .listItem {
+        position: relative;
+        height: 7rem;
+
+        padding: 1.4rem 1.5rem;
+        border: 1px solid #e6e6e1;
+        padding-left: 5rem;
+        transition: padding-left 0.3s;
+        background: white;
+        overflow: hidden;
+        line-height: 1.5;
+
+        .cardStyle {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          background-color: $color-red;
+
+          .bgLayer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            overflow: hidden;
+            width: 100%;
+            height: auto;
+            svg {
+              polygon {
+                fill: white;
+              }
+              .left {
+                opacity: 0.3;
+              }
+              .right {
+                opacity: 0.2;
+              }
+            }
+          }
+        }
+        .cardDecord {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          height: 100%;
+          left: 3rem;
+          background: white;
+          width: auto;
+          transition: transform 0.3s, -webkit-transform 0.3s;
+        }
+        .cardContaineur {
+          color: $color-black;
+          font-weight: 900;
+          position: relative;
+          display: inline-block;
+          width: 100%;
+          text-transform: uppercase;
+          letter-spacing: 0.1rem;
+          h3 {
+            max-width: fit-content;
+            font-family: "Roboto Condensed", sans-serif;
+
+            font-size: 1.266rem;
+            font-weight: bolder;
+            .btLine {
+              position: relative;
+              display: block;
+              width: 30%;
+
+              height: 6px;
+              margin-top: 10px;
+              border-radius: 10px;
+              transition: width 0.3s;
+            }
+          }
+        }
+      }
+      .categorie:nth-child(1) {
+        @include colorListCategories($bg: $color-red);
+      }
+      .categorie:nth-child(2) {
+        @include colorListCategories($bg: $color-jaune);
+      }
+      .categorie:nth-child(3) {
+        @include colorListCategories($bg: $color-bleu);
+      }
+      .categorie:nth-child(4) {
+        @include colorListCategories($bg: $color-vert);
+      }
+      .categorie:nth-child(5) {
+        @include colorListCategories($bg: $color-black);
+      }
+      .categorie:nth-child(6) {
+        @include colorListCategories($bg: $color-vert-clair);
+      }
+      .categorie:nth-child(7) {
+        @include colorListCategories($bg: $color-jaune);
+      }
+      .categorie:nth-child(8) {
+        @include colorListCategories($bg: $color-bleu);
+      }
+      .listItem:hover {
+        padding-left: 1.4rem;
+        .cardDecord {
+          transform: translateX(100%);
+        }
+        .cardContaineur {
+          h3 {
+            color: $color-clair;
+          }
+          .btLine {
+            width: 100%;
+            background-color: $color-clair;
+          }
+        }
+      }
+    }
+    .listFormations {
+      background: url("img/Bgheader.jpg") no-repeat center / cover;
+      .categorie {
+        position: relative;
+        color: $color-clair;
+
+        .infoSurvol {
+          position: absolute;
+          text-transform: uppercase;
+          color: $color-clair;
+          display: block;
+          text-decoration: none;
+          background-color: $color-jaune;
+          width: max-content;
+          color: $color-clair;
+          top: 0;
+          right: 12px;
+
+          transform: translateY(-100%);
+          padding: 2px;
+          border-radius: 5px;
+          max-width: 90%;
+
+          .crolle {
+            background-color: inherit;
+            clip-path: polygon(100% 0, 0 0, 50% 100%);
+            height: 1rem;
+            width: 1rem;
+            position: absolute;
+            bottom: -0.9rem;
+            right: 36%;
+          }
+        }
+        .conteneurList {
+          margin-top: 14px;
+          padding: 10px;
+          background-color: rgba(0, 0, 0, 0.7);
+          .list {
+            .listTitle {
+              display: block;
+
+              margin-bottom: 20px;
+              padding: 20px 0;
+              h3 {
+                font-family: "Roboto Condensed", sans-serif;
+                font-weight: 400;
+                font-size: 1.953rem;
+              }
+              h3::first-letter {
+                text-transform: capitalize;
+              }
+            }
+            ul {
+              padding: 0;
+
+              li {
+                font-size: 1rem;
+                padding: 0.333em 0;
+                margin: 0;
+
+                border-bottom: 1px solid #ccc;
+              }
+              li::first-letter {
+                text-transform: capitalize;
+              }
+            }
+          }
+        }
+      }
+      .categorie:nth-child(1) {
+        @include listFormations($color: #1d909f);
+      }
+      .categorie:nth-child(2) {
+        @include listFormations($color: $color-red);
+      }
+      .categorie:nth-child(3) {
+        @include listFormations($color: $color-jaune);
+      }
+      .categorie:nth-child(4) {
+        @include listFormations($color: #3d54ff);
+      }
+    }
+  }
+}

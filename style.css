@@ -1,0 +1,1621 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+.linkStyle1,
+#formation #formationItem a,
+#contact #sectionContact .contactUs .card .card-body a,
+#formations #informations a,
+#actualites #informations a,
+#infos #informations a,
+#actualites #actualitesItems .card a,
+#infos #actualitesItems .card a,
+#accueil #newFormation .linkStyle,
+#accueil #actualites a,
+#accueil #infos a,
+#accueil #informations a,
+#accueil .modal a,
+#accueil .modal h4,
+footer .siteMap .links a {
+  line-height: 40px;
+  text-decoration: underline var(--color-blanche);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 8px;
+  font-family: "Roboto Condensed", sans-serif;
+  transition: color ease-in 250ms;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #0a0b0b;
+}
+.linkStyle1:hover,
+#formation #formationItem a:hover,
+#contact #sectionContact .contactUs .card .card-body a:hover,
+#formations #informations a:hover,
+#actualites #informations a:hover,
+#infos #informations a:hover,
+#actualites #actualitesItems .card a:hover,
+#infos #actualitesItems .card a:hover,
+#accueil #newFormation .linkStyle:hover,
+#accueil #actualites a:hover,
+#accueil #infos a:hover,
+#accueil #informations a:hover,
+#accueil .modal a:hover,
+#accueil .modal h4:hover,
+footer .siteMap .links a:hover {
+  color: #fea900;
+}
+
+/* Setting Scale 1.125 */
+.animal {
+  position: relative;
+  display: ;
+  height: 500px;
+  width: auto;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 230px;
+  font-size: 1rem;
+  background: #f2f2f2;
+  color: #0a0b0b;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  padding-top: 100px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cormorant Garamond", serif;
+}
+
+h1::first-letter,
+h2::first-letter,
+h3::first-letter,
+h4::first-letter,
+h5::first-letter,
+h6::first-letter {
+  text-transform: uppercase;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: calc(2.027rem + 1.5vw);
+}
+
+h2 {
+  font-size: calc(1.802rem + 1.5vw);
+  font-weight: 700;
+  text-transform: capitalize;
+  color: white;
+  padding-left: 12px;
+}
+
+.titreBg,
+#formations #formationsContainer h2,
+#actualites #actualitesItems .recent .title h2,
+#infos #actualitesItems .recent .title h2 {
+  max-width: fit-content;
+  background-image: url("img/titrebgN.png");
+  background-size: cover;
+}
+
+h3 {
+  font-size: calc(1.602rem + 1.5vw);
+}
+
+h4 {
+  font-size: calc(1.424rem + 1.5vw);
+}
+
+h5 {
+  font-size: calc(1.266rem + 1.5vw);
+}
+
+h6 {
+  font-size: calc(1.125rem + 1.5vw);
+}
+
+.maj {
+  text-transform: uppercase;
+}
+
+/* endSetting */
+/* Navbar */
+nav {
+  background-color: #003e46;
+}
+nav .nav-link {
+  color: #f2f2f2;
+  margin-left: 5px;
+  padding-left: 5px;
+  text-transform: uppercase;
+}
+nav .nav-link.actived,
+nav .nav-link:hover {
+  background-color: #0f7885;
+  color: #f2f2f2;
+}
+nav .navbar-toggler {
+  background-color: #f2f2f2;
+}
+
+.navbar {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  top: 0;
+}
+
+.logo {
+  width: 100px;
+  border-radius: 20px;
+}
+
+/* phone */
+@media screen and (max-width: 576px) {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 200px;
+    padding-top: 70px;
+  }
+  .logo {
+    width: 60px;
+    border-radius: 5px;
+  }
+}
+/* endphone */
+/* endNavbar */
+/* Footer */
+footer {
+  background-color: #003e46;
+  color: #f2f2f2;
+  font-size: 16px;
+  overflow: hidden;
+}
+footer h4 {
+  text-transform: uppercase;
+  font-size: 1.424rem;
+  color: #f2f2f2;
+}
+footer img {
+  max-width: 300px;
+  margin-bottom: 10px;
+}
+footer .pole {
+  max-width: 140px;
+  margin-top: 10px;
+}
+footer .siteMap .links {
+  text-transform: capitalize;
+  list-style: circle;
+}
+footer .siteMap .links a {
+  text-decoration: none;
+  color: #0f7885;
+}
+footer .social {
+  display: flex;
+  justify-content: space-between;
+}
+footer .social a {
+  text-decoration: none;
+}
+
+/* endFooter */
+.bgYellow {
+  background-color: #fea900;
+}
+
+.bgRed {
+  background-color: #f10817;
+}
+
+.bgBlue {
+  background-color: #0017c6;
+}
+
+.bgGreen {
+  background-color: #003e46;
+}
+
+.bgGreenClair {
+  background-color: #0f7885;
+}
+
+.bgBlack {
+  background-color: #0a0b0b;
+}
+
+.cBleu {
+  color: #0017c6;
+}
+
+.cYello {
+  color: #fea900;
+}
+
+.cRed {
+  color: #f10817;
+}
+
+.cGreenClair {
+  color: #0f7885;
+}
+
+/* slider slick */
+.slick-slide {
+  margin: 0px 20px;
+}
+
+.slick-slide img {
+  width: 100%;
+}
+
+.slick-slide {
+  transition: all ease-in-out 0.3s;
+  opacity: 0.2;
+}
+
+.slick-active {
+  opacity: 1;
+}
+
+.slick-current {
+  opacity: 1;
+}
+
+/* slider slick */
+/* scroll top*/
+#crollTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0.4;
+  z-index: 2;
+}
+#crollTop:hover {
+  opacity: 1;
+}
+
+/* endscroll top*/
+.colorPoint {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 40px;
+}
+.colorPoint .block {
+  width: 40px;
+  height: 100%;
+}
+
+.colorPoint.firstColorPoint .left {
+  background-color: #f10817;
+  border-bottom-right-radius: 50px;
+}
+.colorPoint.firstColorPoint .right {
+  background-color: #fea900;
+  border-bottom-left-radius: 50px;
+}
+
+.colorPoint.lastColorPoint .left {
+  background-color: #0017c6;
+  border-top-right-radius: 50px;
+}
+.colorPoint.lastColorPoint .right {
+  background-color: #003e46;
+  border-top-left-radius: 50px;
+}
+
+#accueil {
+  /* header */
+  /* Popub */
+  /* endPopub */
+  /*categories*/
+}
+#accueil header .imgPr {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background-attachment: fixed;
+  background-image: url("img/school.png");
+  background-size: cover;
+  background-position: center;
+}
+#accueil header .imgPr .degrad {
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  bottom: 0;
+  background-image: linear-gradient(to top, rgb(0, 62, 70), transparent);
+}
+#accueil header h1 {
+  text-align: center;
+  padding: 10px 0;
+}
+#accueil header h1 .titlePr {
+  display: block;
+  text-transform: uppercase;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+}
+#accueil header .cardHeader {
+  top: 30px;
+  padding: 10px 0 20px 0;
+  white-space: nowrap; /* Empêche les éléments de revenir à la ligne */
+  z-index: 1;
+  width: 100%;
+  overflow: hidden;
+  background-color: #003e46;
+}
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+#accueil header .cardHeader:hover .cardContains {
+  animation-play-state: running;
+}
+#accueil header .cardHeader .cardContains {
+  width: auto;
+  animation: 20s slide infinite linear;
+  display: inline-block;
+}
+#accueil header .cardHeader .cardContains.running {
+  animation-play-state: running;
+}
+#accueil header .cardHeader .cardContains.paused {
+  animation-play-state: paused;
+}
+#accueil header .cardHeader .cardContains .card {
+  transition: 1s;
+  display: inline-block;
+  position: relative;
+  white-space: wrap;
+  vertical-align: top;
+  width: 550px;
+  max-width: 550px;
+  top: 0;
+  margin-left: 20px;
+  text-transform: capitalize;
+  color: #f2f2f2;
+  border-radius: 0;
+  border: 4px solid #f2f2f2;
+}
+#accueil header .cardHeader .cardContains .card .card-img {
+  position: relative;
+  max-height: 300px;
+  object-fit: cover;
+}
+#accueil header .cardHeader .cardContains .card .card-img-overlay {
+  padding: 0;
+}
+#accueil header .cardHeader .cardContains .card svg {
+  cursor: pointer;
+}
+#accueil header .cardHeader .cardContains .card.firstTime .card-img-overlay h4 {
+  position: absolute;
+  margin: 0;
+  width: 100%;
+  bottom: 0;
+  color: #fea900;
+  font-weight: bolder;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+}
+#accueil header .cardHeader .cardContains .card.firstTime .card-img-overlay p {
+  display: none;
+}
+#accueil
+  header
+  .cardHeader
+  .cardContains
+  .card.firstTime
+  .card-img-overlay
+  .remove {
+  display: none;
+}
+#accueil header .cardHeader .cardContains .card.secondTime .card-img {
+  display: none;
+}
+#accueil header .cardHeader .cardContains .card.secondTime .card-img-overlay {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: max-content;
+  padding: 5px;
+  min-height: 300px;
+}
+#accueil header .cardHeader .cardContains .card.secondTime h4 {
+  color: #fea900;
+  font-weight: bolder;
+}
+#accueil header .cardHeader .cardContains .card.secondTime .add {
+  display: none;
+}
+#accueil .modal {
+  color: #f2f2f2;
+}
+#accueil .modal a,
+#accueil .modal h4 {
+  letter-spacing: 0.8px;
+  color: #f2f2f2;
+  display: block;
+  line-height: 30px;
+  font-weight: 400;
+}
+#accueil .modal .modal-content {
+  background-color: #0f7885;
+  position: relative;
+  width: 100%;
+}
+#accueil .modal .modal-content .logoModalHearder {
+  max-width: 50px;
+}
+#accueil .modal .modal-body .logoModalBody {
+  max-width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+#accueil .modal .modal-body h4 {
+  font-size: 1.424rem;
+  letter-spacing: 0.1px;
+  text-align: center;
+}
+#accueil .modal .modal-body h4:hover {
+  color: #f2f2f2;
+}
+#accueil .modal .modal-body ul li {
+  text-transform: uppercase;
+  list-style-image: url("img/arrow.png");
+  margin-bottom: 10px;
+}
+#accueil .modal .closeButton,
+#accueil .modal .btn-close {
+  background-color: #f10817;
+  color: #f2f2f2;
+}
+#accueil #informations .num {
+  color: #f10817;
+  font-weight: 600;
+}
+#accueil #actualites,
+#accueil #infos {
+  width: 100%;
+  overflow: hidden;
+}
+#accueil #actualites h2,
+#accueil #infos h2 {
+  color: #0a0b0b;
+  margin: 20px 0;
+}
+#accueil #actualites .slideActualites .card,
+#accueil #infos .slideActualites .card {
+  border: none;
+  text-decoration: none;
+  overflow: hidden;
+}
+#accueil #actualites .slideActualites .card .card-img-top,
+#accueil #infos .slideActualites .card .card-img-top {
+  height: 10rem;
+  border-radius: 0;
+  min-height: 150px;
+  max-height: 400px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+#accueil #actualites .slideActualites .card .card-body,
+#accueil #infos .slideActualites .card .card-body {
+  background-color: #ecf3f4;
+  color: #0a0b0b;
+}
+#accueil #actualites .slideActualites .card .card-body h4,
+#accueil #infos .slideActualites .card .card-body h4 {
+  font-size: 1.266rem;
+}
+#accueil #actualites .slideActualites .card .card-body p,
+#accueil #infos .slideActualites .card .card-body p {
+  color: #003e46;
+  font-weight: 500;
+}
+#accueil #actualites .slideActualites .card:hover .card-img-top,
+#accueil #infos .slideActualites .card:hover .card-img-top {
+  transform: scale(1.1);
+}
+#accueil #actualites a,
+#accueil #infos a {
+  color: #003e46;
+  margin-left: 12px;
+}
+#accueil #newFormation {
+  position: relative;
+  height: auto;
+  background-color: #0f7885;
+  padding: 50px 0;
+}
+#accueil #newFormation .formations a {
+  text-decoration: none;
+}
+#accueil #newFormation .formations .card {
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 14px -1px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 14px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 14px -1px rgba(0, 0, 0, 0.75);
+}
+#accueil #newFormation .formations .card .card-img-top {
+  transition: transform 0.3s ease;
+  max-height: 200px;
+  object-fit: cover;
+}
+#accueil #newFormation .formations .card .card-body h3 {
+  font-size: 1.424rem;
+  font-weight: bolder;
+  color: #f2f2f2;
+}
+#accueil #newFormation .formations .card:hover .card-img-top {
+  transform: scale(1.1);
+}
+#accueil #newFormation .linkStyle {
+  display: block;
+  width: fit-content;
+  color: #f2f2f2;
+  margin-top: 20px;
+}
+#accueil #categories {
+  width: 100%;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #0a0b0b;
+}
+#accueil #categories h2 {
+  color: #0a0b0b;
+  padding: 0;
+}
+#accueil #categories .listCategories {
+  margin: 20px 0 100px 0;
+}
+#accueil #categories .listCategories .listItem {
+  position: relative;
+  height: 7rem;
+  padding: 1.4rem 1.5rem;
+  border: 1px solid #e6e6e1;
+  padding-left: 5rem;
+  transition: padding-left 0.3s;
+  background: white;
+  overflow: hidden;
+  line-height: 1.5;
+}
+#accueil #categories .listCategories .listItem .cardStyle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #f10817;
+}
+#accueil #categories .listCategories .listItem .cardStyle .bgLayer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+}
+#accueil #categories .listCategories .listItem .cardStyle .bgLayer svg polygon {
+  fill: white;
+}
+#accueil #categories .listCategories .listItem .cardStyle .bgLayer svg .left {
+  opacity: 0.3;
+}
+#accueil #categories .listCategories .listItem .cardStyle .bgLayer svg .right {
+  opacity: 0.2;
+}
+#accueil #categories .listCategories .listItem .cardDecord {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  left: 3rem;
+  background: white;
+  width: auto;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+#accueil #categories .listCategories .listItem .cardContaineur {
+  color: #0a0b0b;
+  font-weight: 900;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+#accueil #categories .listCategories .listItem .cardContaineur h3 {
+  max-width: fit-content;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1.266rem;
+  font-weight: bolder;
+}
+#accueil #categories .listCategories .listItem .cardContaineur h3 .btLine {
+  position: relative;
+  display: block;
+  width: 30%;
+  height: 6px;
+  margin-top: 10px;
+  border-radius: 10px;
+  transition: width 0.3s;
+}
+#accueil #categories .listCategories .categorie:nth-child(1) .cardStyle {
+  background-color: #f10817;
+}
+#accueil
+  #categories
+  .listCategories
+  .categorie:nth-child(1)
+  .cardContaineur
+  .btLine {
+  background-color: #f10817;
+}
+#accueil #categories .listCategories .categorie:nth-child(2) .cardStyle {
+  background-color: #fea900;
+}
+#accueil
+  #categories
+  .listCategories
+  .categorie:nth-child(2)
+  .cardContaineur
+  .btLine {
+  background-color: #fea900;
+}
+#accueil #categories .listCategories .categorie:nth-child(3) .cardStyle {
+  background-color: #0017c6;
+}
+#accueil
+  #categories
+  .listCategories
+  .categorie:nth-child(3)
+  .cardContaineur
+  .btLine {
+  background-color: #0017c6;
+}
+#accueil #categories .listCategories .categorie:nth-child(4) .cardStyle {
+  background-color: #003e46;
+}
+#accueil
+  #categories
+  .listCategories
+  .categorie:nth-child(4)
+  .cardContaineur
+  .btLine {
+  background-color: #003e46;
+}
+#accueil #categories .listCategories .categorie:nth-child(5) .cardStyle {
+  background-color: #0a0b0b;
+}
+#accueil
+  #categories
+  .listCategories
+  .categorie:nth-child(5)
+  .cardContaineur
+  .btLine {
+  background-color: #0a0b0b;
+}
+#accueil #categories .listCategories .categorie:nth-child(6) .cardStyle {
+  background-color: #0f7885;
+}
+#accueil
+  #categories
+  .listCategories
+  .categorie:nth-child(6)
+  .cardContaineur
+  .btLine {
+  background-color: #0f7885;
+}
+#accueil #categories .listCategories .categorie:nth-child(7) .cardStyle {
+  background-color: #fea900;
+}
+#accueil
+  #categories
+  .listCategories
+  .categorie:nth-child(7)
+  .cardContaineur
+  .btLine {
+  background-color: #fea900;
+}
+#accueil #categories .listCategories .categorie:nth-child(8) .cardStyle {
+  background-color: #0017c6;
+}
+#accueil
+  #categories
+  .listCategories
+  .categorie:nth-child(8)
+  .cardContaineur
+  .btLine {
+  background-color: #0017c6;
+}
+#accueil #categories .listCategories .listItem:hover {
+  padding-left: 1.4rem;
+}
+#accueil #categories .listCategories .listItem:hover .cardDecord {
+  transform: translateX(100%);
+}
+#accueil #categories .listCategories .listItem:hover .cardContaineur h3 {
+  color: #f2f2f2;
+}
+#accueil #categories .listCategories .listItem:hover .cardContaineur .btLine {
+  width: 100%;
+  background-color: #f2f2f2;
+}
+#accueil #categories .listFormations {
+  background: url("img/Bgheader.jpg") no-repeat center/cover;
+}
+#accueil #categories .listFormations .categorie {
+  position: relative;
+  color: #f2f2f2;
+}
+#accueil #categories .listFormations .categorie .infoSurvol {
+  position: absolute;
+  text-transform: uppercase;
+  color: #f2f2f2;
+  display: block;
+  text-decoration: none;
+  background-color: #fea900;
+  width: max-content;
+  color: #f2f2f2;
+  top: 0;
+  right: 12px;
+  transform: translateY(-100%);
+  padding: 2px;
+  border-radius: 5px;
+  max-width: 90%;
+}
+#accueil #categories .listFormations .categorie .infoSurvol .crolle {
+  background-color: inherit;
+  clip-path: polygon(100% 0, 0 0, 50% 100%);
+  height: 1rem;
+  width: 1rem;
+  position: absolute;
+  bottom: -0.9rem;
+  right: 36%;
+}
+#accueil #categories .listFormations .categorie .conteneurList {
+  margin-top: 14px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+#accueil
+  #categories
+  .listFormations
+  .categorie
+  .conteneurList
+  .list
+  .listTitle {
+  display: block;
+  margin-bottom: 20px;
+  padding: 20px 0;
+}
+#accueil
+  #categories
+  .listFormations
+  .categorie
+  .conteneurList
+  .list
+  .listTitle
+  h3 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 400;
+  font-size: 1.953rem;
+}
+#accueil
+  #categories
+  .listFormations
+  .categorie
+  .conteneurList
+  .list
+  .listTitle
+  h3::first-letter {
+  text-transform: capitalize;
+}
+#accueil #categories .listFormations .categorie .conteneurList .list ul {
+  padding: 0;
+}
+#accueil #categories .listFormations .categorie .conteneurList .list ul li {
+  font-size: 1rem;
+  padding: 0.333em 0;
+  margin: 0;
+  border-bottom: 1px solid #ccc;
+}
+#accueil
+  #categories
+  .listFormations
+  .categorie
+  .conteneurList
+  .list
+  ul
+  li::first-letter {
+  text-transform: capitalize;
+}
+#accueil #categories .listFormations .categorie:nth-child(1) .infoSurvol {
+  background-color: #1d909f;
+}
+#accueil #categories .listFormations .categorie:nth-child(1) .listTitle {
+  border-bottom: 10px solid #1d909f;
+}
+#accueil #categories .listFormations .categorie:nth-child(1) .listTitle h3 {
+  color: #1d909f;
+}
+#accueil #categories .listFormations .categorie:nth-child(2) .infoSurvol {
+  background-color: #f10817;
+}
+#accueil #categories .listFormations .categorie:nth-child(2) .listTitle {
+  border-bottom: 10px solid #f10817;
+}
+#accueil #categories .listFormations .categorie:nth-child(2) .listTitle h3 {
+  color: #f10817;
+}
+#accueil #categories .listFormations .categorie:nth-child(3) .infoSurvol {
+  background-color: #fea900;
+}
+#accueil #categories .listFormations .categorie:nth-child(3) .listTitle {
+  border-bottom: 10px solid #fea900;
+}
+#accueil #categories .listFormations .categorie:nth-child(3) .listTitle h3 {
+  color: #fea900;
+}
+#accueil #categories .listFormations .categorie:nth-child(4) .infoSurvol {
+  background-color: #3d54ff;
+}
+#accueil #categories .listFormations .categorie:nth-child(4) .listTitle {
+  border-bottom: 10px solid #3d54ff;
+}
+#accueil #categories .listFormations .categorie:nth-child(4) .listTitle h3 {
+  color: #3d54ff;
+}
+
+#actualites header .title,
+#infos header .title {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-attachment: fixed;
+  background-image: url("img/actualites_bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+#actualites header .title .titleContain,
+#infos header .title .titleContain {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+}
+#actualites header .title .titleContain h1,
+#infos header .title .titleContain h1 {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 12px;
+  color: #f2f2f2;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: calc(1.802rem + 1.5vw);
+}
+#actualites #actualitesItems ul,
+#infos #actualitesItems ul {
+  list-style: square;
+}
+#actualites #actualitesItems .card,
+#infos #actualitesItems .card {
+  border: none;
+  border-radius: 0;
+  border-bottom: 3px solid #0f7885;
+}
+#actualites #actualitesItems .card a,
+#infos #actualitesItems .card a {
+  display: block;
+  color: #0017c6;
+}
+#actualites #actualitesItems .recent .title,
+#infos #actualitesItems .recent .title {
+  border-bottom: 1px solid #0f7885;
+  margin-bottom: 10px;
+}
+#actualites #actualitesItems .recent .title h2,
+#infos #actualitesItems .recent .title h2 {
+  position: relative;
+  width: 100%;
+  font-size: 2.027rem;
+}
+#actualites #actualitesItems .navActualites,
+#infos #actualitesItems .navActualites {
+  background-color: #003e46;
+}
+#actualites #informations a,
+#infos #informations a {
+  font-size: 1rem;
+}
+
+#infos header .title {
+  background-image: url("img/infoBg.jpg");
+}
+
+#formations header .title {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  background-attachment: fixed;
+  background-image: url("img/formations_bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+#formations header .title .titleContain {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px 0 40px 10px;
+  height: 100%;
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+}
+#formations header .title .titleContain .titleCenter {
+  color: #f2f2f2;
+  padding-left: 12px;
+}
+#formations header .title .titleContain .titleCenter h1 {
+  color: #f2f2f2;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: calc(1.802rem + 1.5vw);
+}
+#formations header .title .titleContain .titleCenter h3 {
+  font-size: 1.602rem;
+}
+#formations header .title .titleContain .titleCenter p {
+  margin: 0;
+}
+#formations #categories {
+  width: 100%;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #0a0b0b;
+}
+#formations #categories h2 {
+  color: #0a0b0b;
+  padding: 0;
+}
+#formations #categories .searchBar input {
+  border: 1px solid #0f7885;
+}
+#formations #categories .searchBar button {
+  background-color: #0f7885;
+  color: #f2f2f2;
+}
+#formations #categories .searchBar button:hover {
+  background-color: #fea900;
+}
+#formations #categories .listCategories {
+  margin: 20px 0 20px 0;
+}
+#formations #categories .listCategories .listItem {
+  position: relative;
+  height: 7rem;
+  padding: 1.4rem 1.5rem;
+  border: 1px solid #e6e6e1;
+  padding-left: 5rem;
+  transition: padding-left 0.3s;
+  background: white;
+  overflow: hidden;
+  line-height: 1.5;
+}
+#formations #categories .listCategories .listItem .cardStyle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #f10817;
+}
+#formations #categories .listCategories .listItem .cardStyle .bgLayer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+}
+#formations
+  #categories
+  .listCategories
+  .listItem
+  .cardStyle
+  .bgLayer
+  svg
+  polygon {
+  fill: white;
+}
+#formations
+  #categories
+  .listCategories
+  .listItem
+  .cardStyle
+  .bgLayer
+  svg
+  .left {
+  opacity: 0.3;
+}
+#formations
+  #categories
+  .listCategories
+  .listItem
+  .cardStyle
+  .bgLayer
+  svg
+  .right {
+  opacity: 0.2;
+}
+#formations #categories .listCategories .listItem .cardDecord {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  left: 3rem;
+  background: white;
+  width: auto;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+#formations #categories .listCategories .listItem .cardContaineur {
+  color: #0a0b0b;
+  font-weight: 900;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+#formations #categories .listCategories .listItem .cardContaineur h3 {
+  max-width: fit-content;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1.266rem;
+  font-weight: bolder;
+}
+#formations #categories .listCategories .listItem .cardContaineur h3 .btLine {
+  position: relative;
+  display: block;
+  width: 30%;
+  height: 6px;
+  margin-top: 10px;
+  border-radius: 10px;
+  transition: width 0.3s;
+}
+#formations #categories .listCategories .categorie:nth-child(1) .cardStyle {
+  background-color: #f10817;
+}
+#formations
+  #categories
+  .listCategories
+  .categorie:nth-child(1)
+  .cardContaineur
+  .btLine {
+  background-color: #f10817;
+}
+#formations #categories .listCategories .categorie:nth-child(2) .cardStyle {
+  background-color: #fea900;
+}
+#formations
+  #categories
+  .listCategories
+  .categorie:nth-child(2)
+  .cardContaineur
+  .btLine {
+  background-color: #fea900;
+}
+#formations #categories .listCategories .categorie:nth-child(3) .cardStyle {
+  background-color: #0017c6;
+}
+#formations
+  #categories
+  .listCategories
+  .categorie:nth-child(3)
+  .cardContaineur
+  .btLine {
+  background-color: #0017c6;
+}
+#formations #categories .listCategories .categorie:nth-child(4) .cardStyle {
+  background-color: #003e46;
+}
+#formations
+  #categories
+  .listCategories
+  .categorie:nth-child(4)
+  .cardContaineur
+  .btLine {
+  background-color: #003e46;
+}
+#formations #categories .listCategories .categorie:nth-child(5) .cardStyle {
+  background-color: #0a0b0b;
+}
+#formations
+  #categories
+  .listCategories
+  .categorie:nth-child(5)
+  .cardContaineur
+  .btLine {
+  background-color: #0a0b0b;
+}
+#formations #categories .listCategories .categorie:nth-child(6) .cardStyle {
+  background-color: #0f7885;
+}
+#formations
+  #categories
+  .listCategories
+  .categorie:nth-child(6)
+  .cardContaineur
+  .btLine {
+  background-color: #0f7885;
+}
+#formations #categories .listCategories .categorie:nth-child(7) .cardStyle {
+  background-color: #fea900;
+}
+#formations
+  #categories
+  .listCategories
+  .categorie:nth-child(7)
+  .cardContaineur
+  .btLine {
+  background-color: #fea900;
+}
+#formations #categories .listCategories .categorie:nth-child(8) .cardStyle {
+  background-color: #0017c6;
+}
+#formations
+  #categories
+  .listCategories
+  .categorie:nth-child(8)
+  .cardContaineur
+  .btLine {
+  background-color: #0017c6;
+}
+#formations #categories .listCategories .listItem:hover {
+  padding-left: 1.4rem;
+}
+#formations #categories .listCategories .listItem:hover .cardDecord {
+  transform: translateX(100%);
+}
+#formations #categories .listCategories .listItem:hover .cardContaineur h3 {
+  color: #f2f2f2;
+}
+#formations
+  #categories
+  .listCategories
+  .listItem:hover
+  .cardContaineur
+  .btLine {
+  width: 100%;
+  background-color: #f2f2f2;
+}
+#formations #formationsContainer {
+  margin-bottom: 40px;
+}
+#formations #formationsContainer .formationsItems {
+  margin: 0;
+}
+#formations #formationsContainer .formationsItems a {
+  text-decoration: none;
+}
+#formations #formationsContainer .formationsItems .card {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border: none;
+  border-radius: 0;
+  min-height: 400px;
+  max-width: 450px;
+  margin: 0 auto;
+}
+#formations #formationsContainer .formationsItems .card h4 {
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  font-family: "Roboto Condensed", sans-serif;
+  letter-spacing: 0.4px;
+}
+#formations #formationsContainer .formationsItems .card .card-img-top {
+  z-index: 1;
+  object-fit: cover;
+  border-radius: 0;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+#formations #formationsContainer .formationsItems .card .card-body {
+  border: 1px solid #ccc;
+  background-color: #ffffff;
+  margin: 0 10px;
+  position: relative;
+  top: -20px;
+  z-index: 1;
+}
+#formations #formationsContainer .formationsItems .card .card-body .card-text {
+  margin: 0;
+}
+#formations #formationsContainer .formationsItems .card .card-body .new {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1.4px;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #f2f2f2;
+  width: fit-content;
+  position: absolute;
+  top: -15px;
+  padding: 3px 10px;
+  border-radius: 5px;
+}
+#formations #formationsContainer .formationsItems .card .card-body .split {
+  max-width: fit-content;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
+}
+#formations
+  #formationsContainer
+  .formationsItems
+  .card
+  .card-body
+  .split
+  .btLine {
+  position: relative;
+  display: block;
+  width: 30%;
+  height: 4px;
+  margin-top: 5px;
+  border-radius: 10px;
+  transition: width 0.3s;
+}
+#formations
+  #formationsContainer
+  .formationsItems
+  .card
+  .card-body
+  .split
+  .plus {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  font-weight: bolder;
+  transition: transform 1s;
+}
+#formations #formationsContainer .formationsItems .card .cardStyle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#formations #formationsContainer .formationsItems .card .cardStyle .bgLayer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+}
+#formations
+  #formationsContainer
+  .formationsItems
+  .card
+  .cardStyle
+  .bgLayer
+  svg
+  polygon {
+  fill: white;
+}
+#formations
+  #formationsContainer
+  .formationsItems
+  .card
+  .cardStyle
+  .bgLayer
+  svg
+  .left {
+  opacity: 0.3;
+}
+#formations
+  #formationsContainer
+  .formationsItems
+  .card
+  .cardStyle
+  .bgLayer
+  svg
+  .right {
+  opacity: 0.2;
+}
+#formations #formationsContainer .formationsItems .card:hover {
+  box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.75);
+}
+#formations #formationsContainer .formationsItems .card:hover .card-img-top {
+  transform: scale(1.1);
+}
+#formations #formationsContainer .formationsItems .card:hover .split .btLine {
+  width: 100%;
+}
+#formations #formationsContainer .formationsItems .card:hover .split .plus {
+  transform: rotate(180deg);
+}
+#formations #formationsContainer .formationsItems .card.news .cardStyle,
+#formations #formationsContainer .formationsItems .card.news .new,
+#formations #formationsContainer .formationsItems .card.news .btLine {
+  background-color: #0f7885;
+}
+#formations #formationsContainer .formationsItems .card.news .split {
+  color: #0f7885;
+}
+#formations #formationsContainer .formationsItems .card.news:hover .cardStyle,
+#formations #formationsContainer .formationsItems .card.news:hover .new,
+#formations #formationsContainer .formationsItems .card.news:hover .btLine {
+  background-color: #003e46;
+}
+#formations #formationsContainer .formationsItems .card.news:hover .split {
+  color: #003e46;
+}
+#formations #formationsContainer .formationsItems .card.ens_sup .cardStyle,
+#formations #formationsContainer .formationsItems .card.ens_sup .new,
+#formations #formationsContainer .formationsItems .card.ens_sup .btLine {
+  background-color: rgba(255, 0, 0, 0.7);
+}
+#formations #formationsContainer .formationsItems .card.ens_sup .split {
+  color: rgba(255, 0, 0, 0.7);
+}
+#formations
+  #formationsContainer
+  .formationsItems
+  .card.ens_sup:hover
+  .cardStyle,
+#formations #formationsContainer .formationsItems .card.ens_sup:hover .new,
+#formations #formationsContainer .formationsItems .card.ens_sup:hover .btLine {
+  background-color: #f10817;
+}
+#formations #formationsContainer .formationsItems .card.ens_sup:hover .split {
+  color: #f10817;
+}
+#formations #formationsContainer .formationsItems .card.for_tec .cardStyle,
+#formations #formationsContainer .formationsItems .card.for_tec .new,
+#formations #formationsContainer .formationsItems .card.for_tec .btLine {
+  background-color: rgba(187, 151, 5, 0.7);
+}
+#formations #formationsContainer .formationsItems .card.for_tec .split {
+  color: rgba(187, 151, 5, 0.7);
+}
+#formations
+  #formationsContainer
+  .formationsItems
+  .card.for_tec:hover
+  .cardStyle,
+#formations #formationsContainer .formationsItems .card.for_tec:hover .new,
+#formations #formationsContainer .formationsItems .card.for_tec:hover .btLine {
+  background-color: #fea900;
+}
+#formations #formationsContainer .formationsItems .card.for_tec:hover .split {
+  color: #fea900;
+}
+#formations #formationsContainer .formationsItems .card.adm_ter .cardStyle,
+#formations #formationsContainer .formationsItems .card.adm_ter .new,
+#formations #formationsContainer .formationsItems .card.adm_ter .btLine {
+  background-color: rgba(5, 81, 182, 0.7);
+}
+#formations #formationsContainer .formationsItems .card.adm_ter .split {
+  color: rgba(5, 81, 182, 0.7);
+}
+#formations
+  #formationsContainer
+  .formationsItems
+  .card.adm_ter:hover
+  .cardStyle,
+#formations #formationsContainer .formationsItems .card.adm_ter:hover .new,
+#formations #formationsContainer .formationsItems .card.adm_ter:hover .btLine {
+  background-color: #0017c6;
+}
+#formations #formationsContainer .formationsItems .card.adm_ter:hover .split {
+  color: #0017c6;
+}
+#formations #formationsContainer h2 {
+  font-size: 1.802rem;
+  border-bottom: 1px solid #0f7885;
+  padding: 0;
+  max-width: 100%;
+}
+#formations #formationsContainer .recent {
+  right: 0;
+}
+#formations #formationsContainer .recent .recentContenair {
+  background-color: #003e46;
+  padding: 0 10px;
+  height: 100%;
+}
+#formations #formationsContainer .recent .recentContenair .nav-link {
+  font-size: 13px;
+}
+#formations #informations a {
+  font-size: 1rem;
+}
+
+#contact header .title {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-attachment: fixed;
+  background-image: url("img/contactBg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+#contact header .title .titleContain {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+}
+#contact header .title .titleContain h1 {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 12px;
+  color: #f2f2f2;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: calc(1.802rem + 1.5vw);
+}
+#contact #contactFormMap {
+  margin-bottom: 20px;
+}
+#contact #contactFormMap h2 {
+  color: #f2f2f2;
+}
+#contact #contactFormMap iframe {
+  position: relative;
+  width: 100%;
+}
+#contact #contactFormMap .form {
+  background-color: #003e46;
+}
+#contact #contactFormMap .form .formContainer {
+  height: 100%;
+  width: 100%;
+}
+#contact #contactFormMap .form .formContainer form button {
+  background-color: #0f7885;
+  color: #f2f2f2;
+}
+#contact #sectionContact h2 {
+  display: none;
+}
+#contact #sectionContact .contactUs .card {
+  border: none;
+  width: fit-content;
+  max-width: 400px;
+}
+#contact #sectionContact .contactUs .card .card-body {
+  padding-top: 0;
+}
+#contact #sectionContact .contactUs .card .card-body h3 {
+  font-size: 1.602rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #003e46;
+}
+#contact #sectionContact .contactUs .card .card-body .card-text {
+  color: #0f7885;
+  font-weight: 500;
+  margin: 0;
+  text-transform: capitalize;
+}
+#contact #sectionContact .contactUs .card .card-body a {
+  color: #fea900;
+  font-weight: 500;
+}
+#contact #sectionContact .contactUs .card .card-body a:hover {
+  color: #f10817;
+}
+
+#formation header .title {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  background-attachment: fixed;
+  background-image: url("img/formations_bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+#formation header .title .titleContain {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px 0 40px 10px;
+  height: 100%;
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+}
+#formation header .title .titleContain .titleCenter {
+  color: #f2f2f2;
+  padding-left: 12px;
+}
+#formation header .title .titleContain .titleCenter h1 {
+  color: #f2f2f2;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: calc(1.125rem + 1.5vw);
+}
+#formation header .title .titleContain .titleCenter h1 .titrelink {
+  color: #a2cbcf;
+  text-decoration: none;
+  transition: 0.3s;
+}
+#formation header .title .titleContain .titleCenter h1 .titrelink:hover {
+  color: #f2f2f2;
+}
+#formation header .title .titleContain .titleCenter h3 {
+  font-size: 1.602rem;
+}
+#formation header .title .titleContain .titleCenter p {
+  margin: 0;
+}
+#formation #formationItem a {
+  color: #0017c6;
+}
+#formation #formationItem h3 {
+  font-size: 1.424rem;
+  text-transform: uppercase;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: bolder;
+}
+#formation #formationItem .infos img {
+  width: 100%;
+  height: auto;
+}
+#formation #formationItem .infos .downloadPDF {
+  background-color: #003e46;
+  color: #ecf3f4;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+#formation #formationItem .infos .downloadPDF1 {
+  background-color: #003e46;
+  color: #ecf3f4;
+  padding: 5px;
+  letter-spacing: 0.2px;
+}
+#formation #formationItem .infos .infosCompl {
+  background-color: #ecf3f4;
+}
+#formation #formationItem .description h3 {
+  color: #0f7885;
+}
+#formation #formationItem .description .cours li {
+  list-style-image: url("img/arrow.png");
+}
+#formation #formationItem .description .downloadPDF2 {
+  color: #0017c6;
+}
+
+/*# sourceMappingURL=style.css.map */

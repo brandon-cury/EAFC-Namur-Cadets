@@ -1,0 +1,356 @@
+#formations {
+  header {
+    .title {
+      position: relative;
+      width: 100%;
+      height: fit-content;
+      background-attachment: fixed;
+      background-image: url("img/formations_bg.jpg");
+      background-size: cover;
+      background-position: center;
+      .titleContain {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 40px 0 40px 10px;
+        height: 100%;
+        width: 100%;
+        min-height: 300px;
+        display: flex;
+        align-items: center;
+        .titleCenter {
+          color: $color-clair;
+          padding-left: 12px;
+          h1 {
+            color: $color-clair;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: calc(1.802rem + 1.5vw);
+          }
+          h3 {
+            font-size: 1.602rem;
+          }
+          p {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+  #categories {
+    width: 100%;
+    font-family: "Roboto Condensed", sans-serif;
+    color: $color-black;
+    h2 {
+      color: $color-black;
+      padding: 0;
+    }
+    .searchBar {
+      input {
+        border: 1px solid $color-vert-clair;
+      }
+      button {
+        background-color: $color-vert-clair;
+        color: $color-clair;
+        &:hover {
+          background-color: $color-jaune;
+        }
+      }
+    }
+
+    .listCategories {
+      margin: 20px 0 20px 0;
+      .listItem {
+        position: relative;
+        height: 7rem;
+
+        padding: 1.4rem 1.5rem;
+        border: 1px solid #e6e6e1;
+        padding-left: 5rem;
+        transition: padding-left 0.3s;
+        background: white;
+        overflow: hidden;
+        line-height: 1.5;
+
+        .cardStyle {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          background-color: $color-red;
+
+          .bgLayer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            overflow: hidden;
+            width: 100%;
+            height: auto;
+            svg {
+              polygon {
+                fill: white;
+              }
+              .left {
+                opacity: 0.3;
+              }
+              .right {
+                opacity: 0.2;
+              }
+            }
+          }
+        }
+        .cardDecord {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          height: 100%;
+          left: 3rem;
+          background: white;
+          width: auto;
+          transition: transform 0.3s, -webkit-transform 0.3s;
+        }
+        .cardContaineur {
+          color: $color-black;
+          font-weight: 900;
+          position: relative;
+          display: inline-block;
+          width: 100%;
+          text-transform: uppercase;
+          letter-spacing: 0.1rem;
+          h3 {
+            max-width: fit-content;
+            font-family: "Roboto Condensed", sans-serif;
+
+            font-size: 1.266rem;
+            font-weight: bolder;
+            .btLine {
+              position: relative;
+              display: block;
+              width: 30%;
+
+              height: 6px;
+              margin-top: 10px;
+              border-radius: 10px;
+              transition: width 0.3s;
+            }
+          }
+        }
+      }
+      .categorie:nth-child(1) {
+        @include colorListCategories($bg: $color-red);
+      }
+      .categorie:nth-child(2) {
+        @include colorListCategories($bg: $color-jaune);
+      }
+      .categorie:nth-child(3) {
+        @include colorListCategories($bg: $color-bleu);
+      }
+      .categorie:nth-child(4) {
+        @include colorListCategories($bg: $color-vert);
+      }
+      .categorie:nth-child(5) {
+        @include colorListCategories($bg: $color-black);
+      }
+      .categorie:nth-child(6) {
+        @include colorListCategories($bg: $color-vert-clair);
+      }
+      .categorie:nth-child(7) {
+        @include colorListCategories($bg: $color-jaune);
+      }
+      .categorie:nth-child(8) {
+        @include colorListCategories($bg: $color-bleu);
+      }
+      .listItem:hover {
+        padding-left: 1.4rem;
+        .cardDecord {
+          transform: translateX(100%);
+        }
+        .cardContaineur {
+          h3 {
+            color: $color-clair;
+          }
+          .btLine {
+            width: 100%;
+            background-color: $color-clair;
+          }
+        }
+      }
+    }
+  }
+
+  #formationsContainer {
+    margin-bottom: 40px;
+
+    .formationsItems {
+      margin: 0;
+      a {
+        text-decoration: none;
+      }
+      .card {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        border: none;
+        border-radius: 0;
+        min-height: 400px;
+        max-width: 450px;
+        margin: 0 auto;
+
+        h4 {
+          font-size: 1.125rem;
+          text-transform: uppercase;
+          font-family: "Roboto Condensed", sans-serif;
+          letter-spacing: 0.4px;
+        }
+        .card-img-top {
+          z-index: 1;
+          object-fit: cover;
+          border-radius: 0;
+          width: 100%;
+          height: auto;
+          overflow: hidden;
+          transition: transform 0.3s;
+        }
+        .card-body {
+          border: 1px solid #ccc;
+          background-color: #ffffff;
+          margin: 0 10px;
+          position: relative;
+          top: -20px;
+          z-index: 1;
+          .card-text {
+            margin: 0;
+          }
+
+          .new {
+            font-family: "Roboto Condensed", sans-serif;
+            font-weight: bold;
+            letter-spacing: 1.4px;
+            font-size: 13px;
+            text-transform: uppercase;
+            color: $color-clair;
+            width: fit-content;
+            position: absolute;
+            top: -15px;
+            padding: 3px 10px;
+            border-radius: 5px;
+          }
+
+          .split {
+            max-width: fit-content;
+            font-family: "Roboto Condensed", sans-serif;
+            font-weight: 700;
+            .btLine {
+              position: relative;
+              display: block;
+              width: 30%;
+              height: 4px;
+              margin-top: 5px;
+              border-radius: 10px;
+              transition: width 0.3s;
+            }
+            .plus {
+              display: inline-block;
+              margin: 0;
+              padding: 0;
+              font-weight: bolder;
+              transition: transform 1s;
+            }
+          }
+        }
+        .cardStyle {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+
+          .bgLayer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            overflow: hidden;
+            width: 100%;
+            height: auto;
+            svg {
+              polygon {
+                fill: white;
+              }
+              .left {
+                opacity: 0.3;
+              }
+              .right {
+                opacity: 0.2;
+              }
+            }
+          }
+        }
+        &:hover {
+          .card-img-top {
+            transform: scale(1.1);
+          }
+
+          .split {
+            .btLine {
+              width: 100%;
+            }
+            .plus {
+              transform: rotate(180deg);
+            }
+          }
+          box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.75);
+          -webkit-box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.75);
+        }
+
+        @include colorFormations($items: news);
+        @include colorFormations(
+          $items: ens_sup,
+          $bfColor: rgb(255, 0, 0, 0.7),
+          $afColor: $color-red
+        );
+        @include colorFormations(
+          $items: for_tec,
+          $bfColor: rgba(187, 151, 5, 0.7),
+          $afColor: $color-jaune
+        );
+        @include colorFormations(
+          $items: adm_ter,
+          $bfColor: rgba(5, 81, 182, 0.7),
+          $afColor: $color-bleu
+        );
+      }
+    }
+
+    h2 {
+      font-size: 1.802rem;
+      border-bottom: 1px solid $color-vert-clair;
+      padding: 0;
+      @extend .titreBg;
+      max-width: 100%;
+    }
+    .recent {
+      right: 0;
+      .recentContenair {
+        background-color: $color-vert;
+        padding: 0 10px;
+        height: 100%;
+        .nav-link {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  #informations {
+    a {
+      @extend .linkStyle1;
+      font-size: 1rem;
+    }
+  }
+}

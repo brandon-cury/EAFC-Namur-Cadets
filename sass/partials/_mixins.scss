@@ -1,0 +1,95 @@
+@mixin settingSection(
+  $h2: false,
+  $bg: $color-clair,
+  $color: $color-black,
+  $height: 900px,
+  $padding: false
+) {
+  h2 {
+    @if $h2 {
+      display: block;
+    } @else {
+      display: none;
+    }
+  }
+  @if $padding {
+    padding: 70px 30px;
+  }
+  background-color: $bg;
+  color: $color;
+  height: $height;
+  h2 {
+    display: none;
+  }
+}
+
+@mixin degrad($position: relative, $type: top, $color: rgba(0, 62, 70, 1)) {
+  position: $position;
+  height: 100px;
+  width: 100%;
+  bottom: 0;
+  background-image: linear-gradient(to $type, $color, transparent);
+}
+@mixin listFormations($color: $color-clair) {
+  .infoSurvol {
+    background-color: $color;
+  }
+
+  .listTitle {
+    border-bottom: 10px solid $color;
+    h3 {
+      color: $color;
+    }
+  }
+}
+@mixin colorListCategories($bg: $color-red) {
+  .cardStyle {
+    background-color: $bg;
+  }
+  .cardContaineur {
+    .btLine {
+      background-color: $bg;
+    }
+  }
+}
+@mixin setColorPoint(
+  $left: $color-red,
+  $right: $color-jaune,
+  $leftRadius: bottom-right,
+  $rightRaduis: bottom-left
+) {
+  .left {
+    background-color: $left;
+    border-#{$leftRadius}-radius: 50px;
+  }
+  .right {
+    background-color: $right;
+    border-#{$rightRaduis}-radius: 50px;
+  }
+}
+@mixin colorFormations(
+  $items,
+  $bfColor: $color-vert-clair,
+  $afColor: $color-vert
+) {
+  &.#{$items} {
+    .cardStyle,
+    .new,
+    .btLine {
+      background-color: $bfColor;
+    }
+    .split {
+      color: $bfColor;
+    }
+  }
+  &.#{$items}:hover {
+    .cardStyle,
+    .new,
+    .btLine {
+      background-color: $afColor;
+    }
+    .split {
+      color: $afColor;
+    }
+  }
+}
